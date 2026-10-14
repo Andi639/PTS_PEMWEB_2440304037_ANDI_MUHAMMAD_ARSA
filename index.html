@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,61 @@
     </header>
 
     <main>
-        <!-- Konten aplikasi dan data API akan diletakkan di sini -->
+        <!-- Area Analisis Data -->
+        <section id="data-analysis" class="card">
+            <h2>Statistik Produk</h2>
+            <div id="stats-container">
+                <p>Total Produk: <span id="total-products">-</span></p>
+                <p>Rata-rata Harga: $<span id="average-price">-</span></p>
+            </div>
+        </section>
+
+        <!-- Area Kontrol: Pencarian & Limit -->
+        <section id="controls" class="card controls-container">
+            <div class="search-box">
+                <label for="searchInput">Cari Produk:</label>
+                <input type="text" id="searchInput" placeholder="Ketik nama produk...">
+            </div>
+            <div class="limit-box">
+                <label for="limitSelect">Tampilkan:</label>
+                <select id="limitSelect">
+                    <option value="10">10 Data</option>
+                    <option value="20">20 Data</option>
+                    <option value="30">30 Data</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Indikator Loading -->
+        <div id="loading-indicator" class="hidden">
+            <p>Memuat data produk...</p>
+        </div>
+
+        <!-- Area Daftar Produk -->
+        <section id="product-container" class="product-grid">
+            <!-- Data dari JavaScript akan muncul di sini -->
+        </section>
+
+        <!-- Area Pagination -->
+        <section id="pagination" class="pagination-container">
+            <button id="btn-prev" disabled>Sebelumnya</button>
+            <span id="page-info">Halaman 1</span>
+            <button id="btn-next">Selanjutnya</button>
+        </section>
+
+        <!-- Area Form Catatan -->
+        <section id="form-section" class="card">
+            <h2>Tinggalkan Catatan</h2>
+            <form id="noteForm">
+                <div class="form-group">
+                    <label for="userNote">Catatan (Minimal 30 Karakter):</label>
+                    <textarea id="userNote" rows="4" placeholder="Tulis catatan Anda di sini..."></textarea>
+                    <div id="note-error" class="error-msg"></div>
+                    <div id="note-success" class="success-msg"></div>
+                </div>
+                <button type="submit">Kirim Catatan</button>
+            </form>
+        </section>
     </main>
 
     <footer>
