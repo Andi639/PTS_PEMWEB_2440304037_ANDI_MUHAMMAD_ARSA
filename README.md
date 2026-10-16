@@ -49,3 +49,4 @@ Tiga digit terakhir NIM = **037**
    ```javascript
    const totalPrice = products.reduce((sum, item) => sum + item.price, 0);
    const avgPrice = (totalPrice / products.length).toFixed(2);
+   
