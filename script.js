@@ -157,3 +157,5 @@ noteForm.addEventListener('submit', (e) => {
 // === Jalankan Aplikasi ===
 // Tarik data saat web pertama kali dibuka
 loadData();
+
+// final code check
